@@ -1,133 +1,132 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
-     <title>Da Vinci</title>
-     
-
+    <title>Da Vinci</title>
     <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="description" content="<model-viewer> template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link type="text/css" href="./styles.css" rel="stylesheet">
-     <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+    <!-- Stylesheets -->
+    <link type="text/css" href="./styles.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
- <style>
-        h5 {
-            text-align: center;
-            margin-top: -5px;
-            font-size: 9px;
-            color: #636363; /* Improves visibility */
-        }
 
-        .attributiontwo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-        }
+    <!-- Focus-visible -->
+    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
-        .attributiontwo span {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-        }
+    <!-- Inline Styles -->
+    <style>
+      h5 {
+        text-align: center;
+        margin-top: -5px;
+        font-size: 9px;
+        color: #636363;
+      }
 
-        .attributiontwo a {
-            margin: 15px;
-            text-decoration: none; /* Removes underline */
-           -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
-        }
+      .attributiontwo6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+      }
 
+      .attributiontwo6 .icon-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image: url('black.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .attributiontwo6 a {
+        margin: 10px;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .icon {
+        width: 43px;
+        height: 43px;
+        transition: transform 0.2s ease;
+      }
+
+      .icon:hover {
+        transform: scale(1.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
         .icon {
-            width: 43px;
-            height: 43px;            
+          width: 43px;
+          height: 43px;
         }
-        .icon:hover {
-            transform: scale(1.1);         
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .attributiontwo {
-                padding: 15px;
-            }
-            .icon {
-                width: 43px;
-                height: 43px;
-            }
-        }
-    </style>	  
+      }
+    </style>
   </head>
-  
-    
-  <body>
-            <div id="card">
-              <!-- <model-viewer> HTML element -->
-              <model-viewer src="assets/surgical robotics.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="loading.gif"  shadow-intensity="0.88" shadow-softness="1" exposure="1" autoplay>
-                <div class="progress-bar hide" slot="progress-bar">
-                    <div class="update-bar"></div>
-                </div>
-		      <button slot="ar-button" id="ar-button">
-        View in 4D
-    </button>
-                 <div id="button">
-                    
-                </div>
-		  <div id="button" style = "display:flex; justify-content: space-between;">
-          <img src="4.png"  align="center" style="width:80px;  padding-left: 9px;padding-top: 6px;"/>
-	  <img src="iitname.png"  style="width:80px;  padding-right: 6px;padding-top: 0px;"/>    
-      </div>
-               
-                <div id="ar-prompt">
-                    <img src="ar_hand_prompt.png">
-                </div>
-              </model-viewer> 
-               <section class="attributiontwo6">
-                 <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
-                
-                <span>
-                  
-                   <a href="https://drive.google.com/file/d/1kpr9csFU_trpcXrLeKH5CQIM5k02qxK6/view?usp=sharing">
-			   <img src="Broucher_1.png" class="icon"></a>
-        <a href="https://youtu.be/feR4lDjrLt8">
-		<img src="Video_1.png" class="icon" ></a>
-        <a href="https://seventh-reality.com/">
-		<img src="web_1.png" class="icon" ></a>
-        <a href="https://forms.gle/nPU6KsDggsqnVopt6">
-		<img src="form_1.png" class="icon" ></a>            
-                </span>
-                   <style>
-                 h5 {
-                 text-align: center;
-                 margin-top:-5px; 
-                 
-                 
-                 font-size: 9px;
-                   }
-                    
-             </style>  
-             
-              </section>
-            </section>
-           
-           
-         
-          </div> 
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0GDPPF96D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Q0GDPPF96D');
-</script>
-   
+  <body>
+    <div id="card">
+      <!-- Model Viewer -->
+      <model-viewer
+        src="assets/surgical robotics.glb"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        poster="loading.gif"
+        shadow-intensity="0.88"
+        shadow-softness="1"
+        exposure="1"
+        autoplay
+      >
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+
+        <button slot="ar-button" id="ar-button">View in 4D</button>
+
+        <div id="button" style="display:flex; justify-content: space-between;">
+          <img src="4.png" style="width:80px; padding-left: 9px; padding-top: 6px;" />
+          <img src="iitname.png" style="width:80px; padding-right: 6px; padding-top: 0px;" />
+        </div>
+
+        <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+        </div>
+      </model-viewer>
+
+      <!-- Attribution Links Section -->
+      <section class="attributiontwo6">
+        <div class="icon-links">
+          <a href="https://drive.google.com/file/d/1kpr9csFU_trpcXrLeKH5CQIM5k02qxK6/view?usp=sharing">
+            <img src="Broucher_1.png" class="icon" alt="Brochure">
+          </a>
+          <a href="https://youtu.be/feR4lDjrLt8">
+            <img src="Video_1.png" class="icon" alt="Video">
+          </a>
+          <a href="https://seventh-reality.com/">
+            <img src="web_1.png" class="icon" alt="Website">
+          </a>
+          <a href="https://forms.gle/nPU6KsDggsqnVopt6">
+            <img src="form_1.png" class="icon" alt="Form">
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0GDPPF96D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-Q0GDPPF96D');
+    </script>
+
+    <!-- Script Files -->
     <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-		    
   </body>
 </html>
